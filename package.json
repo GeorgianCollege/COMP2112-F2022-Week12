@@ -5,9 +5,12 @@
   "main": "server.js",
   "author": "Tom Tsiliopoulos",
   "license": "MIT",
-  "scripts": { 
-    "start": "node --watch server.js"},
+  "scripts": {
+    "start": "node --watch server.js"
+  },
   "dependencies": {
-    "@types/node": "^18.11.9"
+    "@types/mime-types": "^2.1.1",
+    "@types/node": "^18.11.9",
+    "mime-types": "^2.1.35"
   }
 }

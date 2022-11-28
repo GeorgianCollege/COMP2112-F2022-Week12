@@ -1,7 +1,9 @@
 import http from 'http';
 import fs from 'fs';
+import url from 'url';
 
 let port: number = 3000;
+let host: string = "localhost";
 
 // creating an instance of the server object
 let server = http.createServer((req, res)=>{
