@@ -19,10 +19,15 @@ let server = http_1.default.createServer((req, res) => {
     }
     let file = path_1.default.join(__dirname, "./Client") + "\\" + parsedPath;
     console.log(file);
+    readHTML(file, parsedPath, req, res);
+});
+function readHTML(file, parsedPath, req, res) {
     fs_1.default.readFile(file, (err, data) => {
         if (err) {
             res.writeHead(404);
-            res.end(JSON.stringify(err));
+            fs_1.default.readFile(path_1.default.join(__dirname, "./Client") + "\\404.html", (err, fileData) => {
+                res.end(fileData);
+            });
             return;
         }
         res.setHeader("X-Content-Type-Options", "nosniff");
@@ -30,7 +35,7 @@ let server = http_1.default.createServer((req, res) => {
         res.writeHead(200, "", { "Content-Type": mimeType });
         res.end(data);
     });
-});
+}
 server.listen(port, 'localhost', () => {
     console.log(`Listening on Port: ${port}`);
 });
