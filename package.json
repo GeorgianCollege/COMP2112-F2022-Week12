@@ -1,0 +1,13 @@
+{
+  "name": "comp2112-f2022-week12",
+  "version": "0.0.1",
+  "description": "NodeJS Demo Project for COMP2112 in the Fall 2022 Semester @ Georgian College",
+  "main": "server.js",
+  "author": "Tom Tsiliopoulos",
+  "license": "MIT",
+  "scripts": { 
+    "start": "node server.js"},
+  "dependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
