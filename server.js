@@ -7,7 +7,7 @@ const http_1 = __importDefault(require("http"));
 let port = 3000;
 let server = http_1.default.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello, World!");
+    res.end("Hello!");
 });
 server.listen(port, 'localhost', () => {
     console.log(`Listening on Port: ${port}`);
